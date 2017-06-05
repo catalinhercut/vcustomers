@@ -58,7 +58,7 @@
     },
     methods: {
         fetchCustomer(id){
-            this.$http.get('http://slimapp/api/customer/'+id)
+            this.$http.get('http://local.slim.ro/api/customer/'+id)
             .then(function(response){
                 this.customer = response.body;
             });
@@ -77,7 +77,7 @@
                     state: this.customer.state
                 }
 
-                this.$http.put('http://slimapp/api/customer/update/'+this.$route.params.id, updCustomer)
+                this.$http.put('http://local.slim.ro/api/customer/update/'+this.$route.params.id, updCustomer)
                     .then(function(response){
                         this.$router.push({path: '/', query: {alert: 'Customer Updated'}});
                     });

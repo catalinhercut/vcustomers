@@ -38,7 +38,7 @@
     },
     methods: {
       fetchCustomers(){
-        this.$http.get('http://slimapp/api/customers')
+        this.$http.get('http://local.slim.ro/api/customers')
           .then(function(response){
             this.customers = response.body;
           });
