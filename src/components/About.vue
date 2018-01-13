@@ -1,7 +1,7 @@
 <template>
   <div class="about container">
     <h1 class="page-header">About</h1>
-    <p>This is a customer manager app built with the Vue.js framework</p>
+    <p>This is a rent manager application built with the Vue.js framework for frontend view and uses REST API made with with SLIM Php</p>
     <p>Version 1.0.0</p>
   </div>
 </template>

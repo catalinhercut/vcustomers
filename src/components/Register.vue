@@ -1,7 +1,7 @@
 <template>
   <div class="add container">
     <Alert v-if="alert" v-bind:message="alert" />
-    <h1 class="page-header">Add Customer</h1>
+    <h1 class="page-header">Register</h1>
     <form v-on:submit="addCustomer">
         <div class="well">
             <h4>Customer Info</h4>
@@ -12,6 +12,10 @@
             <div class="form-group">
                 <label>Last Name</label>
                 <input type="text" class="form-control" placeholder="Last Name" v-model="customer.last_name">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" class="form-control" placeholder="Password" v-model="customer.customer_password">
             </div>
         </div>
         <div class="well">
@@ -40,6 +44,7 @@
                 <label>State</label>
                 <input type="text" class="form-control" placeholder="State" v-model="customer.state">
             </div>
+            
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -49,7 +54,7 @@
 <script>
     import Alert from './Alert'
     export default {
-    name: 'add',
+    name: 'register',
     data () {
         return {
         customer: {},
@@ -64,12 +69,15 @@
                 let newCustomer = {
                     first_name: this.customer.first_name,
                     last_name: this.customer.last_name,
+                    customer_password: this.customer.customer_password,
                     phone: this.customer.phone,
                     email: this.customer.email,
                     address: this.customer.address,
                     city: this.customer.city,
                     state: this.customer.state
+
                 }
+                console.log(newCustomer);
 
                 this.$http.post('http://local.slimapp.ro/api/customer/add', newCustomer)
                     .then(function(response){
