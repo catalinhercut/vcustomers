@@ -71,7 +71,7 @@
                     state: this.customer.state
                 }
 
-                this.$http.post('http://local.slim.ro/api/customer/add', newCustomer)
+                this.$http.post('http://local.slimapp.ro/api/customer/add', newCustomer)
                     .then(function(response){
                         this.$router.push({path: '/', query: {alert: 'Customer Added'}});
                     });
