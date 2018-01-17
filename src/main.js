@@ -5,6 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
 import Customers from './components/Customers'
+import Cars from './components/Cars'
 import About from './components/About'
 import Register from './components/Register'
 import Edit from './components/Edit'
@@ -18,6 +19,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     {path:'/', component: Customers},
+    {path:'/list', component: Cars},
     {path: '/about', component: About},
     {path: '/add', component: Register},
     {path: '/customer/:id', component: CustomerDetails},
@@ -47,8 +49,8 @@ new Vue({
             <li><router-link to="/about">About</router-link></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><router-link to="/add">Register</router-link></li>
-            <li><router-link to="/login">Login</router-link></li>
+            <li><router-link to="/add">Client Register</router-link></li>
+            <li><router-link to="/list">List Cars</router-link></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

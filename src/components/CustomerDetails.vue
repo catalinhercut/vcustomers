@@ -13,9 +13,12 @@
         </ul>
 
         <ul class="list-group">
-            <li class="list-group-item"> {{customer.address}}</li>
-            <li class="list-group-item">{{customer.city}}</li>
-            <li class="list-group-item">{{customer.state}}</li>
+            <li class="list-group-item">
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>{{customer.address}}
+            </li>
+            <li class="list-group-item">
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>{{customer.city}}
+            </li>
         </ul>
   </div>
 </template>
